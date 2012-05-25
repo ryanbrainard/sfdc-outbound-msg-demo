@@ -116,7 +116,7 @@
                             <wsdlFiles>
                                 <wsdlFile>AccountNotificationOutboundMessage.wsdl</wsdlFile>
                             </wsdlFiles>
-                            <implementationClassName>com.salesforce.caseinformerAccountNotificationHandler</implementationClassName>
+                            <implementationClassName>com.salesforce.caseinformer.AccountNotificationHandler</implementationClassName>
                             <outputDirectory>${project.build.directory}/generated-sources/axis</outputDirectory>
                             <serverSide>true</serverSide>
                             <testCases>false</testCases>
