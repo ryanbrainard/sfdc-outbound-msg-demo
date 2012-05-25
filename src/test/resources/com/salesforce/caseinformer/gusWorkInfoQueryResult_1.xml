@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns="urn:partner.soap.sforce.com"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sf="urn:sobject.partner.soap.sforce.com">
+    <soapenv:Body>
+        <queryResponse>
+            <result xsi:type="QueryResult">
+                <done>false</done>
+                <queryLocator>QUERY_LOCATOR_ID</queryLocator>
+                <records xsi:type="sf:sObject">
+                    <sf:type>ADM_Work__c</sf:type>
+                    <sf:Id xsi:nil="true"/>
+                    <sf:Name>W-000001</sf:Name>
+                    <sf:Subject__c>A Change Sets bug affecting one customer</sf:Subject__c>
+                    <sf:R00NT0000000lhZtMAI__r xsi:type="QueryResult">
+                        <done>true</done>
+                        <queryLocator xsi:nil="true"/>
+                        <records xsi:type="sf:sObject">
+                            <sf:type>ADM_Case__c</sf:type>
+                            <sf:Id xsi:nil="true"/>
+                            <sf:Case_ID__c>50030000007sq87AAA</sf:Case_ID__c>
+                            <sf:Case_Number__c>00000002</sf:Case_Number__c>
+                            <sf:Account_Name__c>Merrill Lynch</sf:Account_Name__c>
+                            <sf:Case_Subject__c>Sandbox never stopped copying and Change Sets is broken</sf:Case_Subject__c>
+                            <sf:Case_Owner__c>Evan Angeles</sf:Case_Owner__c>
+                        </records>
+                        <size>1</size>
+                    </sf:R00NT0000000lhZtMAI__r>
+                </records>
+                <size>1</size>
+            </result>
+        </queryResponse>
+    </soapenv:Body>
+</soapenv:Envelope>

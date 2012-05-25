@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns="urn:partner.soap.sforce.com">
+    <soapenv:Body>
+        <createResponse>
+            <result>
+                <id>FAKE_ID_01</id>
+                <success>true</success>
+            </result>
+            <result>
+                <id>FAKE_ID_02</id>
+                <success>true</success>
+            </result>
+        </createResponse>
+    </soapenv:Body>
+</soapenv:Envelope>

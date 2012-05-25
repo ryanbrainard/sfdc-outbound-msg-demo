@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><env:Envelope xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><env:Header><SessionHeader xmlns="urn:partner.soap.sforce.com"><sessionId xsi:nil="true" /></SessionHeader><EmailHeader xmlns="urn:partner.soap.sforce.com"><triggerAutoResponseEmail>false</triggerAutoResponseEmail><triggerOtherEmail>false</triggerOtherEmail><triggerUserEmail>false</triggerUserEmail></EmailHeader></env:Header><env:Body><m:create xmlns:m="urn:partner.soap.sforce.com" xmlns:sobj="urn:sobject.partner.soap.sforce.com"><m:sObjects><sobj:type xsi:type="xsd:string">CaseComment</sobj:type><sobj:ParentId xsi:type="xsd:string">50030000007sAiW</sobj:ParentId><sobj:CommentBody xsi:type="xsd:string">Fixes for the following bugs have been released to production in RELEASE_NAME:
+
+ * W-000002 : A Sandbox bug affecting two customers
+</sobj:CommentBody></m:sObjects><m:sObjects><sobj:type xsi:type="xsd:string">CaseComment</sobj:type><sobj:ParentId xsi:type="xsd:string">50030000007sq87</sobj:ParentId><sobj:CommentBody xsi:type="xsd:string">Fixes for the following bugs have been released to production in RELEASE_NAME:
+
+ * W-000002 : A Sandbox bug affecting two customers
+ * W-000001 : A Change Sets bug affecting one customer
+</sobj:CommentBody></m:sObjects></m:create></env:Body></env:Envelope>

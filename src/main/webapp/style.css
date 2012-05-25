@@ -1,0 +1,42 @@
+* {
+    font-family: Verdana, Arial, Kalimati, Utkal, FreeSans, sans-serif;
+    font-size: small;
+ }
+
+h1, h2, h3, h4, h5, h6, * a:hover {
+    color: rgb(66, 150, 231);
+}
+
+h1 {
+    font-size: large;
+}
+
+h2 {
+    font-size: medium;
+}
+
+a {
+    color: black;
+}
+
+* a:hover {
+    text-decoration: underline;
+}
+
+label {
+    font-weight: bold;
+}
+
+#container {
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.success {
+    color: green;
+}
+
+.error {
+    color: red;
+}
