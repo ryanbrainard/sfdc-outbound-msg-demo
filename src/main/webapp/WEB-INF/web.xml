@@ -3,7 +3,7 @@
         "http://java.sun.com/dtd/web-app_2_3.dtd" >
 
 <web-app>
-    <display-name>Case Informer</display-name>
+    <display-name>sfdc-outbound-msg-demo</display-name>
 
     <servlet>
         <servlet-name>AxisServlet</servlet-name>

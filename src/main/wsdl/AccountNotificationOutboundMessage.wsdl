@@ -133,7 +133,7 @@ All Rights Reserved
     <service name="NotificationService">
         <documentation>Notification Service Implementation</documentation>
         <port binding="tns:NotificationBinding" name="Notification">
-            <soap:address location="https://sfdc-outbound-msg-demo.herokuapp.com/notifications/acccount"/>
+            <soap:address location="https://sfdc-outbound-msg-demo.herokuapp.com/services/AccountNotification"/>
         </port>
     </service>
     

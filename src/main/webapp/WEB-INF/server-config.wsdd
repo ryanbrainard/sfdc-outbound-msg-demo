@@ -33,8 +33,8 @@
 
         <typeMapping
                 xmlns:ns="http://soap.sforce.com/2005/09/outbound"
-                qname="ns:ADM_Release__cNotification"
-                languageSpecificType="java:com.sforce.soap._2005._09.outbound.ADM_Release__cNotification"
+                qname="ns:AccountNotification"
+                languageSpecificType="java:com.sforce.soap._2005._09.outbound.AccountNotification"
                 serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
                 deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
                 encodingStyle=""
@@ -65,8 +65,8 @@
                 />
         <typeMapping
                 xmlns:ns="urn:sobject.enterprise.soap.sforce.com"
-                qname="ns:ADM_Release__c"
-                languageSpecificType="java:com.sforce.soap.enterprise.sobject.ADM_Release__c"
+                qname="ns:Account"
+                languageSpecificType="java:com.sforce.soap.enterprise.sobject.Account"
                 serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
                 deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
                 encodingStyle=""
