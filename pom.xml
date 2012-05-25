@@ -47,7 +47,7 @@
                 <version>1.4</version>
                 <executions>
                     <execution>
-                        <id>wsdl2java:ReleaseNotificationOutboundMessage</id>
+                        <id>wsdl2java:AccountNotificationOutboundMessage</id>
                         <goals>
                             <goal>wsdl2java</goal>
                         </goals>
@@ -55,7 +55,7 @@
                             <wsdlFiles>
                                 <wsdlFile>AccountNotificationOutboundMessage.wsdl</wsdlFile>
                             </wsdlFiles>
-                            <implementationClassName>com.salesforce.caseinformer.AccountNotificationHandler</implementationClassName>
+                            <implementationClassName>com.github.ryanbrainard.AccountNotificationHandler</implementationClassName>
                             <outputDirectory>${project.build.directory}/generated-sources/axis</outputDirectory>
                             <serverSide>true</serverSide>
                             <testCases>false</testCases>
@@ -73,7 +73,7 @@
                     <execution>
                         <configuration>
                             <target name="cleanUpWsdl2Java">
-                                <delete dir="${project.build.directory}/generated-sources/axis/com/salesforce"/>
+                                <delete dir="${project.build.directory}/generated-sources/axis/com/github/ryanbrainard"/>
                             </target>
                         </configuration>
                         <phase>generate-sources</phase>

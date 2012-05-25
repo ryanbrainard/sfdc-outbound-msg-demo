@@ -26,7 +26,7 @@
         <parameter name="wsdlServiceElement" value="NotificationService"/>
         <parameter name="schemaQualified" value="urn:enterprise.soap.sforce.com,http://soap.sforce.com/2005/09/outbound,urn:sobject.enterprise.soap.sforce.com"/>
         <parameter name="wsdlServicePort" value="Notification"/>
-        <parameter name="className" value="com.salesforce.caseinformer.AccountNotificationHandler"/>
+        <parameter name="className" value="com.github.ryanbrainard.AccountNotificationHandler"/>
         <parameter name="wsdlPortType" value="NotificationPort"/>
         <parameter name="typeMappingVersion" value="1.1"/>
         <parameter name="allowedMethods" value="notifications"/>

@@ -1,4 +1,4 @@
-package com.salesforce.caseinformer;
+package com.github.ryanbrainard;
 
 import com.sforce.soap._2005._09.outbound.AccountNotification;
 import com.sforce.soap.enterprise.sobject.Account;
@@ -10,7 +10,7 @@ import javax.jws.WebService;
 import java.rmi.RemoteException;
 
 @WebService
-public class AccountNotificationHandler implements com.sforce.soap._2005._09.outbound.NotificationPort{
+public class AccountNotificationHandler implements com.sforce.soap._2005._09.outbound.NotificationPort {
 
     private final static Logger logger = LoggerFactory.getLogger(AccountNotificationHandler.class);
 
