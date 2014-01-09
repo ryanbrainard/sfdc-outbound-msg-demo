@@ -3,33 +3,11 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.github.ryanbrainard</groupId>
     <artifactId>sfdc-outbound-msg-demo</artifactId>
-    <packaging>war</packaging>
+    <packaging>jar</packaging>
     <version>0.1-SNAPSHOT</version>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
-    <dependencies>
-        <dependency>
-            <groupId>com.force.api</groupId>
-            <artifactId>force-partner-api</artifactId>
-            <version>24.0.0</version>
-        </dependency>
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>jcl-over-slf4j</artifactId>
-            <version>1.5.10</version>
-        </dependency>
-        <dependency>
-            <groupId>com.googlecode.sli4j</groupId>
-            <artifactId>sli4j-slf4j-log4j</artifactId>
-            <version>2.0</version>
-        </dependency>
-        <dependency>
-            <groupId>axis</groupId>
-            <artifactId>axis</artifactId>
-            <version>1.4</version>
-        </dependency>
-    </dependencies>
     <build>
         <finalName>sfdc-outbound-msg-demo</finalName>
         <plugins>
@@ -42,67 +20,38 @@
                 </configuration>
             </plugin>
             <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>axistools-maven-plugin</artifactId>
-                <version>1.4</version>
+                <groupId>org.apache.cxf</groupId>
+                <artifactId>cxf-codegen-plugin</artifactId>
+                <version>2.7.7</version>
                 <executions>
                     <execution>
-                        <id>wsdl2java:AccountNotificationOutboundMessage</id>
+                        <id>testing123</id>
+                        <phase>generate-sources</phase>
+                        <configuration>
+                            <sourceRoot>${basedir}/target/generated/src/main/java</sourceRoot>
+                            <wsdlOptions>
+                                <wsdlOption>
+                                    <wsdl>${basedir}/src/main/wsdl/AccountNotificationOutboundMessage.wsdl</wsdl>
+                                </wsdlOption>
+                            </wsdlOptions>
+                        </configuration>
                         <goals>
                             <goal>wsdl2java</goal>
                         </goals>
-                        <configuration>
-                            <wsdlFiles>
-                                <wsdlFile>AccountNotificationOutboundMessage.wsdl</wsdlFile>
-                            </wsdlFiles>
-                            <implementationClassName>com.github.ryanbrainard.AccountNotificationHandler</implementationClassName>
-                            <outputDirectory>${project.build.directory}/generated-sources/axis</outputDirectory>
-                            <serverSide>true</serverSide>
-                            <testCases>false</testCases>
-                            <runTestCasesAsUnitTests>true</runTestCasesAsUnitTests>
-                            <testSourceDirectory>${project.build.directory}/generated-test-sources/axis</testSourceDirectory>
-                            <verbose>true</verbose>
-                        </configuration>
                     </execution>
                 </executions>
-            </plugin>
-            <plugin>
-                <artifactId>maven-antrun-plugin</artifactId>
-                <version>1.6</version>
-                <executions>
-                    <execution>
-                        <configuration>
-                            <target name="cleanUpWsdl2Java">
-                                <delete dir="${project.build.directory}/generated-sources/axis/com/github/ryanbrainard"/>
-                            </target>
-                        </configuration>
-                        <phase>generate-sources</phase>
-                        <goals>
-                            <goal>run</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-dependency-plugin</artifactId>
-                <version>2.3</version>
-                <executions>
-                    <execution>
-                        <phase>package</phase>
-                        <goals><goal>copy</goal></goals>
-                        <configuration>
-                            <artifactItems>
-                                <artifactItem>
-                                    <groupId>com.github.jsimone</groupId>
-                                    <artifactId>webapp-runner</artifactId>
-                                    <version>7.0.22.3</version>
-                                    <destFileName>webapp-runner.jar</destFileName>
-                                </artifactItem>
-                            </artifactItems>
-                        </configuration>
-                    </execution>
-                </executions>
+                <dependencies>
+                    <dependency>
+                        <groupId>xerces</groupId>
+                        <artifactId>xercesImpl</artifactId>
+                        <version>2.9.1</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>org.apache.cxf</groupId>
+                        <artifactId>cxf-xjc-ts</artifactId>
+                        <version>2.2.12</version>
+                    </dependency>
+                </dependencies>
             </plugin>
         </plugins>
     </build>
